@@ -9,7 +9,10 @@ MEMORY
    * Memory with CPU cache.
    *6M CPU SRAM
    */
+  /*
   ram (wxa!ri) : ORIGIN = 0x80000000, LENGTH = (6 * 1024 * 1024)
+  */
+  ram (wxa!ri) : ORIGIN = 0x80004000, LENGTH = (6 * 1024 * 1024 - 0x4000)
   /*
    * Memory without CPU cache
    * 6M CPU SRAM
